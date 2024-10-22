@@ -7,10 +7,10 @@ RETURNS FLOAT DETERMINISTIC
 BEGIN
     DECLARE result FLOAT DEFAULT 0;
     IF b = 0 THEN
-		RETURN 0;
-    END IF;
+	RETURN 0;
     ELSE
-	SET result = a / b;
+	SET result = a / b;-- Perform division if divisor is not zero
 	RETURN result;
+    END IF;
 END $$
 DELIMITER ;
